@@ -1,0 +1,23 @@
+Prérequis :
+
+Python 3.8
+Pip
+
+Pour utiliser pip sous windows lorsqu'il n'est pas dans le path : py -m pip
+
+Exemple d'installation d'un package : py -m pip install SQLAlchemy
+py -m pip install psycopg
+
+[Bug]
+Les variables de type SQLAlchemy peuvent être mal interprétées par VS Code, il faut alors modifier la conf : 
+https://stackoverflow.com/questions/53975234/instance-of-sqlalchemy-has-no-column-member-no-member
+
+
+Astuce tuto :
+
+Pour générer la base de données sans exécuter le script python, il est possible depuis l'interpréteur python de faire ceci :
+
+"from main import db"  => main est le nom du fichier de script python qui contient la variable db.
+"db.create_all()" => une fois la variable db importée, il suffit de saisir la commande create_all()
+
+
